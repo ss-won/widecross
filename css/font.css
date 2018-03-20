@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+/*
+-----------------------------------------------------------------------------------
+폰트 웹코딩 방식 - 1 
+@font-face{
+    font-family:[서체에 적용해서 코딩할때 쓸 이름];
+    src:[서체의 실제 존재 경로 코딩]
+        local(※),//로컬 저장소에서 서체 이름으로 된 서체 찾기
+        url('/fonts/')//로컬 저장소에 없으면, url(상대경로).format(서체확장자명)에 있는 서체 찾기;
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+폰트 웹코딩 방식 - 2
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+Google font 사용
+https://fonts.google.com/
+위 사이트에서 필요한 글꼴 선택하면 @import 방식으로 알아서 코딩해줌 -> css 시트에 적용하고 font-family로 코딩
+
+-----------------------------------------------------------------------------------
+}
+*/
+
+
+/* 배달의 민족 주아체 웹코딩 */
+@font-face{
+font-family:jua;
+    /* 폰트 절대경로 : /fonts/BMJUA.eot */
+src:url('/Notice/fonts/BMJUA_ttf.ttf');
+src:local(※), 
+	url('/Notice/fonts/BMJUA.eot') format('eot'),
+    url('/Notice/fonts/BMJUA.woff');
+}
+
+
+
+
+*{
+    /* 폰트 적용순서 : 배달의민족 '주아체', 나눔고딕(구글폰트), sans-serif */
+    font-family: 'jua','Nanum Gothic' ,sans-serif;
+    font-size: 1.0em;
+}
